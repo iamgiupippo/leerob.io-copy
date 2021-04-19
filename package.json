@@ -13,9 +13,19 @@
     "url": "git+https://github.com/leerob/leerob.io.git"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "analyze": "BUNDLE_ANALYZE=both yarn build",
+    "prettier-fix": "prettier --write .",
+    "find:unused": "next-unused",
+    "generate": "graphql-codegen",
+    "generate:definitions": "node framework/bigcommerce/scripts/generate-definitions.js"
+  },
+  "sideEffects": false,
+  "license": "MIT",
+  "engines": {
+    "node": "14.x"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "0.6.0",
@@ -29,9 +39,10 @@
     "big.js": "6.0.3",
     "comma-number": "2.0.1",
     "date-fns": "2.20.1",
+    "express": "^4.17.1",
     "fathom-client": "3.0.0",
-    "googleapis": "^71.0.0",
     "gray-matter": "4.0.2",
+    "http-proxy-middleware": "^1.2.0",
     "ioredis": "^4.26.0",
     "mdx-prism": "0.3.3",
     "micro-cookie-session": "^2.0.0-beta.1",
@@ -55,6 +66,7 @@
   "devDependencies": {
     "globby": "11.0.3",
     "image-size": "0.9.7",
+    "nodemon": "^2.0.7",
     "prettier": "2.2.1",
     "rehype": "11.0.0",
     "remark-frontmatter": "3.0.0",

@@ -90,8 +90,8 @@ export default function Blog({ posts }) {
   );
 }
 
-// export async function getStaticProps() {
-//   const posts = await getAllFilesFrontMatter('blog');
+export async function getStaticProps() {
+  const posts = await getAllFilesFrontMatter('blog');
 
-//   return { props: { posts } };
-// }
+  return { props: { posts } };
+}

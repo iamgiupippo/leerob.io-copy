@@ -13,7 +13,7 @@
     "url": "git+https://github.com/leerob/leerob.io.git"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start"
   },

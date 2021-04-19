@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { google } from 'googleapis';
+// import { google } from 'googleapis';
 
-import googleAuth from '@/lib/google/auth';
+// import googleAuth from '@/lib/google/auth';
 import Timeline from '../components/Timeline';
 import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
@@ -9,25 +9,25 @@ import Subscribe from '../components/Subscribe';
 import ProjectCard from '../components/ProjectCard';
 import VideoCard from '../components/VideoCard';
 
-export async function getStaticProps() {
-  const auth = await googleAuth.getClient();
-  const youtube = google.youtube({
-    auth,
-    version: 'v3'
-  });
+// export async function getStaticProps() {
+//   const auth = await googleAuth.getClient();
+//   const youtube = google.youtube({
+//     auth,
+//     version: 'v3'
+//   });
 
-  const response = await youtube.videos.list({
-    id: 'Pd2tVxhFnO4,FytxaSVQROc,u_o09PD_qAs',
-    part: 'snippet,statistics'
-  });
+//   const response = await youtube.videos.list({
+//     id: 'Pd2tVxhFnO4,FytxaSVQROc,u_o09PD_qAs',
+//     part: 'snippet,statistics'
+//   });
 
-  return {
-    props: {
-      videos: response.data.items
-    },
-    revalidate: 60 * 60 // 1 hour
-  };
-}
+//   return {
+//     props: {
+//       videos: response.data.items
+//     },
+//     revalidate: 60 * 60 // 1 hour
+//   };
+// }
 
 export default function Home({ videos }) {
   return (
@@ -77,12 +77,12 @@ export default function Home({ videos }) {
           href="https://masteringnextjs.com/"
           icon="nextjs"
         />
-        <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-12 text-black dark:text-white">
+        {/* <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-12 text-black dark:text-white">
           Recent Videos
         </h3>
         {videos.map((video) => (
           <VideoCard key={video.id} {...video} />
-        ))}
+        ))} */}
         <Timeline />
         <Subscribe />
       </div>

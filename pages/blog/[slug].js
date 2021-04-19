@@ -21,9 +21,11 @@ export async function getStaticPaths() {
         slug: p.replace(/\.mdx/, '')
       }
     })),
-    fallback: false
+    fallback: true
   };
 }
+
+
 
 export async function getStaticProps({ params }) {
   const post = await getFileBySlug('blog', params.slug);

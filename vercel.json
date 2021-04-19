@@ -40,6 +40,13 @@
     {
       "source": "/live",
       "destination": "https://www.youtube.com/channel/UCZMli3czZnd1uoc1ShTouQw/live"
+    },
+    {
+      "env": {
+        "GOOGLE_ENCRYPTION_IV": "@google-encryption-iv",
+        "GOOGLE_ENCRYPTION_KEY": "@google-encryption-secret"
+      }
     }
   ]
+  
 }

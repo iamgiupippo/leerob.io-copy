@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/leerob/leerob.io.git"
   },
-   "scripts": {
+  "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -30,7 +30,6 @@
     "comma-number": "2.0.1",
     "date-fns": "2.20.1",
     "fathom-client": "3.0.0",
-    "file-system": "^2.2.2",
     "firebase-admin": "^9.6.0",
     "fs": "^0.0.1-security",
     "googleapis": "^71.0.0",
@@ -58,7 +57,6 @@
     "swr": "0.5.5",
     "tailwindcss": "^2.1.1",
     "unsplash-js": "6.3.0"
-    
   },
   "devDependencies": {
     "@webpack-cli/generators": "^2.0.0",
